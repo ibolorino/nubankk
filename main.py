@@ -1,16 +1,12 @@
 from services import Operation
 import json
+import sys
 
 
 def main():
-    operations = []
-    operation = input()
-    print("##################")
-    print(operation)
-    print("##################")
-    while operation:
-        operations.append(json.loads(operation))
-        operation = input()
+    operations = [line.strip() for line in sys.stdin.readlines()]
+    operations = [json.loads(operation) for operation in operations if operation != '']
+    
     for orders in operations:
         op = Operation(orders)
         print(op.taxes)
@@ -19,4 +15,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
