@@ -12,6 +12,5 @@ def main() -> None:
         print(op.taxes)
     return
 
-
 if __name__ == "__main__":
     main()

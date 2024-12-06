@@ -21,7 +21,6 @@ class Operation:
         self._update_quantity(order)
         self._update_loss(order, order_result)
         
-
     def _update_average_price(self, order: dict) -> None:
         if order.get("operation") == "buy":
             average_price = (self.average_price * self.quantity + order.get("unit-cost") * order.get("quantity"))/(self.quantity + order.get("quantity"))
@@ -51,3 +50,4 @@ class Operation:
         else:
             tax = 0
         self.taxes.append({"tax": tax})
+        
