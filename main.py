@@ -3,7 +3,7 @@ import json
 import sys
 
 
-def main():
+def main() -> None:
     operations = [line.strip() for line in sys.stdin.readlines()]
     operations = [json.loads(operation) for operation in operations if operation != '']
     
