@@ -1,4 +1,4 @@
-# Tax Calculator with Docker
+# Capital Gains
 
 This repository contains a Python script that calculates taxes for a list of operations provided via the command line or an input file (`input.txt`). The application runs inside a Docker container and includes unit tests to ensure code reliability.
 
